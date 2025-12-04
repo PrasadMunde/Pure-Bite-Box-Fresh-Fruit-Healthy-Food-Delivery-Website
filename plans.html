@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruut Fruit Bowl Subscription - Clone</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font for general modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the original image's look and feel */
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
+
+ .cta-red { background-color: #e53e3e; } /* A strong primary red */
+        .cta-red:hover { background-color: #c53030; }
+
+        .bg-fruut-red { background-color: #ff0000; }
+        .text-fruut-red { color: #ff0000; }
+        .border-fruut-red { border-color: #ff0000; }
+        .logo-text { font-size: 24px; font-weight: 800; line-height: 1; }
+        .footer-bg { background-color: #ff0000; }
+        .footer-link { color: #fff; opacity: 0.7; transition: opacity 0.2s; }
+        .footer-link:hover { opacity: 1; }
+        .contact-top-bar { font-size: 11px; }
+
+        /* Custom Card Styles for visual separation/shadows */
+        .subscription-card {
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+        .subscription-card:hover {
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+        
+        /* Matching the floating WhatsApp button */
+        .whatsapp-button {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 50;
+        }
+        
+        /* Styling for the large fruit images (placeholders) */
+        .fruit-image-placeholder {
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar (Matching the slim red header) -->
+    <div class="bg-fruut-red text-white flex justify-between px-4 py-1 contact-top-bar">
+        <div class="flex space-x-4">
+            <span>📞 988470044</span>
+            <span>📧 fruutingmail.com</span>
+            <span>🕒 Mon - Fri 10:00 - 19:00</span>
+        </div>
+        <div class="flex space-x-2">
+            <a href="#" class="hover:opacity-80">FB</a>
+            <a href="#" class="hover:opacity-80">IG</a>
+            <a href="#" class="hover:opacity-80">LI</a>
+        </div>
+    </div>
+
+     <!-- Main Navigation Bar -->
+     <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-extrabold text-red-primary tracking-tight">
+                    FRESH AMRIT 🥭
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+		    <a href="plans.html" class="nav-link">Fruit bowl Subscription</a>
+                    <a href="sub.html" class="nav-link">Corporate Plans</a>
+                    <a href="plans.html" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About Us</a> <!-- Updated link -->
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </nav>
+
+
+                <!-- CTA/Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:inline-block text-sm font-medium text-red-primary border-2 border-red-primary rounded-full px-4 py-1 hover:bg-red-50 transition duration-150">
+                        Login
+                    </button>
+                    <button class="cta-red text-white text-sm font-medium rounded-full px-4 py-1.5 shadow-md hover:shadow-lg transition duration-150">
+                        Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="whatsapp-button hidden md:block">
+        WhatsApp Us
+    </a>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section (Title and form) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                    Fruit Bowl Subscription
+                </h1>
+                <p class="text-sm text-gray-600 max-w-2xl mx-auto mb-8">
+                    Ready to eat pre-cut fruits, veggies, and juice shots at your doorstep. Crafted with love in our hygienic facilities. Perfect for daily needs.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                
+                <!-- Left Column: Form -->
+                <div class="lg:w-1/2 p-6 md:p-10 bg-white shadow-xl rounded-xl border border-gray-100 w-full">
+                    <h2 class="text-xl font-bold text-gray-900 mb-6">
+                        Get 30% off your first subscription order with our code
+                    </h2>
+                    
+                    <!-- Form Fields -->
+                    <form class="space-y-4 text-sm">
+                        <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                        <input type="tel" placeholder="Phone" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                        <input type="text" placeholder="Delivery Address" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                        <input type="text" placeholder="Coupon Code (Optional)" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                        
+                        <div class="flex items-center space-x-3 pt-2">
+                            <input type="checkbox" id="terms" class="text-fruut-red rounded border-gray-300 focus:ring-fruut-red">
+                            <label for="terms" class="text-gray-600 text-xs">
+                                I agree to receive offers from Fruut on WhatsApp
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="bg-fruut-red text-white font-bold py-3 w-full rounded-md shadow-lg hover:bg-red-700 transition duration-150">
+                            Apply Coupon & Proceed
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Right Column: Image and Text (Mockup of the main bowl image) -->
+                <div class="lg:w-1/2 w-full lg:order-last order-first">
+                    <img src="images/img8.jpg" 
+                         alt="Large image of a fruit bowl and ingredients" 
+                         class="rounded-xl shadow-2xl w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Category Header -->
+        <section class="bg-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="text-2xl font-extrabold text-gray-900 mb-2">
+                    Subscriptions To Choose From
+                </h2>
+                <div class="w-20 h-1 bg-fruut-red mx-auto rounded-full"></div>
+            </div>
+        </section>
+        
+        <!-- Subscription Packs (3 items in a row) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Pack 1: Fresh Fruit Bowl Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img1.jpg" alt="Fresh Fruit Bowl Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Fresh Fruit Bowl Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">The ultimate daily fruit fix. Hygienically pre-cut and ready to eat.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pack 2: Fresh Fruit Salad Bowl Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img2.jpg" alt="Fresh Fruit Salad Bowl Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Fresh Fruit Salad Bowl Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">Mixed fruits with a healthy dressing. Perfect as a meal replacement.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pack 3: Exotic Fruit Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img3.jpg" alt="Exotic Fruit Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Exotic Fruit Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">Try rare, nutrient-dense fruits sourced globally for a unique experience.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Packs (3 items in a row) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                
+                <!-- Pack 4: Fresh Veggie Bowl Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img4.jpg" alt="Fresh Veggie Bowl Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Fresh Veggie Bowl Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">Pre-cut veggies for salads or snacking. Dip included.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pack 5: Fresh Fruit & Veggie Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img5.jpg" alt="Fresh Fruit & Veggie Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Fresh Fruit & Veggie Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">The best of both worlds: a balanced mix of fruits and veggies.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pack 6: Breakfast & Skin Care Pack -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subscription-card">
+                    <img src="images/img6.jpg" alt="Breakfast & Skin Care Pack" class="w-full fruit-image-placeholder object-cover">
+                    <div class="p-5 text-center">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Breakfast & Skin Care Pack</h4>
+                        <p class="text-sm text-gray-600 mb-4">Fruits rich in collagen-boosting vitamins for a healthy glow and start to your day.</p>
+                        <button class="bg-fruut-red text-white font-medium rounded-full px-5 py-2 hover:bg-red-700 transition duration-150">
+                            Select Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Subscription Options / Frequency -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h3 class="text-3xl font-extrabold text-gray-900 mb-2">
+                Subscription Options
+            </h3>
+            <div class="w-20 h-1 bg-fruut-red mx-auto rounded-full mb-10"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <!-- Weekly Subscription -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-fruut-red">
+                    <h4 class="text-xl font-extrabold text-fruut-red mb-1">Weekly Subscription</h4>
+                    <p class="text-sm text-gray-600">Daily delivery for 7 days. Perfect for a quick start.</p>
+                    <button class="bg-fruut-red text-white font-bold py-2 px-6 rounded-full mt-4 text-sm hover:bg-red-700 transition duration-150">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <!-- Monthly Subscription -->
+                <div class="p-6 bg-white rounded-xl shadow-lg subscription-card">
+                    <h4 class="text-xl font-extrabold text-gray-800 mb-1">Monthly Subscription</h4>
+                    <p class="text-sm text-gray-600">Daily delivery for 30 days. Value for money with 5% off.</p>
+                    <button class="bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-full mt-4 text-sm hover:bg-gray-300 transition duration-150">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <!-- Bi-Weekly Subscription -->
+                <div class="p-6 bg-white rounded-xl shadow-lg subscription-card">
+                    <h4 class="text-xl font-extrabold text-gray-800 mb-1">Bi-Weekly Subscription</h4>
+                    <p class="text-sm text-gray-600">Daily delivery for 15 days. Flexible option.</p>
+                    <button class="bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-full mt-4 text-sm hover:bg-gray-300 transition duration-150">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Custom Subscription -->
+                <div class="p-6 bg-white rounded-xl shadow-lg subscription-card">
+                    <h4 class="text-xl font-extrabold text-gray-800 mb-1">Custom Subscription</h4>
+                    <p class="text-sm text-gray-600">Tailor your delivery frequency and fruit mix.</p>
+                    <button class="bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-full mt-4 text-sm hover:bg-gray-300 transition duration-150">
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Fruit Bowl Subscription Section -->
+        <section class="bg-white py-16 border-t border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-extrabold text-center text-gray-900 mb-2">
+                    Why Fruit Bowl Subscription?
+                </h3>
+                <p class="text-center text-sm text-gray-600 max-w-2xl mx-auto mb-10">
+                    You don't need to step out in the city traffic for fresh fruits or waste time cutting them! We deliver fresh, hygienic, and ready-to-eat fruits right to your door.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    
+                    <!-- Left: Feature List -->
+                    <div class="md:w-1/2 w-full">
+                        <div class="bg-fruut-red p-8 rounded-xl shadow-lg text-white">
+                            <h4 class="text-2xl font-bold mb-4">
+                                Product Features/Benefits
+                            </h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-center space-x-3">
+                                    <span class="font-extrabold text-lg">✓</span>
+                                    <span>Daily Fresh Delivery at your Doorstep</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span class="font-extrabold text-lg">✓</span>
+                                    <span>Hygienically Packed, Ready to Eat</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span class="font-extrabold text-lg">✓</span>
+                                    <span>High Quality and Best Price available</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span class="font-extrabold text-lg">✓</span>
+                                    <span>Customization available</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span class="font-extrabold text-lg">✓</span>
+                                    <span>Option to Pause/Skip Delivery every Week</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right: Supporting Text -->
+                    <div class="md:w-1/2 w-full pt-4 md:pt-0">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">
+                            How it works
+                        </h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            <span class="font-bold text-gray-800">1. Select your pack:</span> Choose from our range of specially curated fruit bowls, salads, or mixed packs. <br class="mb-2">
+                            <span class="font-bold text-gray-800">2. Choose Subscription plan:</span> Opt for weekly, monthly, or a custom duration that suits your needs. <br class="mb-2">
+                            <span class="font-bold text-gray-800">3. Checkout:</span> Use your discount code and complete the payment process. <br class="mb-2">
+                            <span class="font-bold text-gray-800">4. Enjoy Daily Delivery:</span> Your fresh, ready-to-eat fruit bowl will be delivered right to your doorstep at your chosen time slot.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h3 class="text-3xl font-extrabold text-gray-900 mb-2">
+                About Us
+            </h3>
+            <div class="w-20 h-1 bg-fruut-red mx-auto rounded-full mb-6"></div>
+            
+            <p class="text-sm text-gray-600 max-w-4xl mx-auto mb-10 leading-relaxed">
+                Fruut was born out of a simple idea: to make it easy for people to enjoy fresh fruits every day. We wanted to provide a service that would make it convenient for busy people to incorporate healthy eating habits into their daily routine. With this in mind, we founded our fresh cut fruit subscription company and set out to make our vision a reality. We take pride in delivering the highest quality fruit, all while making the process easy and convenient for you.
+            </p>
+            
+            <button class="text-fruut-red border border-fruut-red font-bold py-2 px-8 rounded-full hover:bg-red-50 transition duration-150 text-sm">
+                READ MORE
+            </button>
+        </section>
+        
+        <!-- Client Testimonials Section -->
+        <section class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-extrabold text-center text-gray-900 mb-2">
+                    Client Testimonials
+                </h3>
+                <div class="w-20 h-1 bg-fruut-red mx-auto rounded-full mb-10"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-fruut-red">
+                        <p class="text-sm text-gray-700 italic mb-4">
+                            "I've been a subscriber for three months now, and I couldn't be happier. The quality is excellent, and the convenience is unbeatable. It has truly helped me maintain a healthy diet, even on busy workdays."
+                        </p>
+                        <p class="font-bold text-fruut-red text-sm">— Ashish Srivastava</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-fruut-red">
+                        <p class="text-sm text-gray-700 italic mb-4">
+                            "The Diabetic Care Pack is a lifesaver. Knowing I can trust the ingredients and the freshness makes managing my diet so much simpler. Thank you, Fruut, for caring about specialized needs."
+                        </p>
+                        <p class="font-bold text-fruut-red text-sm">— Sneha Verma</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-fruut-red">
+                        <p class="text-sm text-gray-700 italic mb-4">
+                            "We use the corporate plan, and it has dramatically improved the office morale and reduced our snack budget. Everyone loves the daily delivery of fresh, pre-cut fruits. Highly recommended!"
+                        </p>
+                        <p class="font-bold text-fruut-red text-sm">— Valmiki Mathur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA / Sign Up Section -->
+        <section class="relative py-20 overflow-hidden" style="background-image: url('images/img10.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center bg-white/90 p-8 rounded-xl shadow-2xl">
+                    
+                    <!-- Left Column: Text -->
+                    <div class="md:w-1/2">
+                        <h2 class="text-2xl font-extrabold text-fruut-red mb-2">
+                            Sign up today and receive
+                        </h2>
+                        <p class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
+                            your daily serving of delicious, fresh cut fruit.
+                        </p>
+                    </div>
+                    
+                    <!-- Right Column: Form -->
+                    <div class="md:w-1/3 w-full mt-6 md:mt-0">
+                        <form class="space-y-3">
+                            <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-md">
+                            <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-md">
+                            <button type="submit" class="bg-fruut-red text-white font-bold py-3 w-full rounded-md shadow-lg hover:bg-red-700 transition duration-150">
+                                SUBSCRIBE NOW
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                <!-- ABOUT US -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">ABOUT US</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Fruit Bowl Subscription</a></li>
+                        <li><a href="#" class="footer-link">Corporate Orders</a></li>
+                        <li><a href="#" class="footer-link">Franchise with us</a></li>
+                        <li><a href="#" class="footer-link">Order</a></li>
+                        <li><a href="#" class="footer-link">Refer</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- QUICK LINK -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">QUICK LINK</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="footer-link">Contact us</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Refund & Returns Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and condition</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT US -->
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">CONTACT US</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2"><span>📞</span> <span>988470044</span></li>
+                        <li class="flex items-center space-x-2"><span>📧</span> <span>fruutingmail.com</span></li>
+                        <li class="flex items-center space-x-2"><span>📍</span> <span>Bhandup West, Mumbai, Maharashtra 400078</span></li>
+                    </ul>
+                </div>
+
+                <!-- WEEKLY NEWSLETTER (Right Aligned in Original) -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">WEEKLY NEWSLETTER</h4>
+                    <form>
+                        <input type="email" placeholder="Email Address" class="w-full p-3 mb-3 rounded-md text-gray-900">
+                        <button type="submit" class="bg-gray-900 text-white font-bold py-3 w-full rounded-md hover:bg-gray-700 transition duration-150">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Bar -->
+    <div class="bg-gray-900 text-white py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between text-xs">
+            <p>COPYRIGHT 2025 © FRUUT.IN ALL RIGHTS RESERVED</p>
+            <div class="flex space-x-2">
+                <a href="#" class="hover:text-red-300">FB</a>
+                <a href="#" class="hover:text-red-300">IG</a>
+                <a href="#" class="hover:text-red-300">LI</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

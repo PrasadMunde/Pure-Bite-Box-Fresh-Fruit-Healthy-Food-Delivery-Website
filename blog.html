@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruut Blog - Freshness & Health Tips</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .cta-red {
+            background-color: #e53e3e;
+        }
+
+        /* A strong primary red */
+        .cta-red:hover {
+            background-color: #c53030;
+        }
+
+        .bg-fruut-red {
+            background-color: #ff0000;
+        }
+
+        .text-fruut-red {
+            color: #ff0000;
+        }
+
+        .border-fruut-red {
+            border-color: #ff0000;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        /* Custom hover effect for blog cards */
+        .blog-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-button {
+            /* Simulating the floating WhatsApp button */
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Contact Bar (Matching previous design) -->
+    <div class="bg-fruut-red text-white flex justify-between px-4 py-3 text-xs">
+        <div class="flex space-x-4" style="margin-top: 3px;">
+            <span style="font-size: 15px;">📞 988470044</span>
+            <span style="font-size: 15px;">📧 fruutingmail.com</span>
+            <span style="font-size: 15px;">🕒 Mon - Fri 10:00 - 19:00</span>
+        </div>
+        <div class="hidden sm:flex space-x-2">
+            <a href="https://www.instagram.com/yourusername" target="_blank" style="color: white; font-size: 25px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank" style="color: white; font-size: 25px;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://wa.me/919999999999" target="_blank" style="color: white; font-size: 25px;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-extrabold text-red-primary tracking-tight">
+                    FRESH AMRIT 🥭
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="plans.html" class="nav-link">Fruit bowl Subscription</a>
+                    <a href="sub.html" class="nav-link">Corporate Plans</a>
+                    <a href="plans.html" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About Us</a> <!-- Updated link -->
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </nav>
+
+
+                <!-- CTA/Actions -->
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="hidden md:inline-block text-sm font-medium text-red-primary border-2 border-red-primary rounded-full px-4 py-1 hover:bg-red-50 transition duration-150">
+                        Login
+                    </button>
+                    <button
+                        class="cta-red text-white text-sm font-medium rounded-full px-4 py-1.5 shadow-md hover:shadow-lg transition duration-150">
+                        Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="whatsapp-button hidden md:block">
+        WhatsApp Us
+    </a>
+
+    <!-- Blog Hero/Title Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                The Fruut Journal: Health & Freshness
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Dive into our latest articles on nutrition, seasonal fruits, easy recipes, and the benefits of a daily
+                fruit diet.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <input type="text" placeholder="Search the blog..."
+                    class="w-full max-w-md p-3 border border-gray-300 rounded-l-lg focus:ring-fruut-red focus:border-fruut-red">
+                <button class="bg-fruut-red text-white p-3 rounded-r-lg font-semibold hover:bg-red-700 transition">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Blog Content Layout -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Categories/Tags Section -->
+        <div class="mb-12 border-b border-gray-200 pb-4">
+            <h2 class="text-xl font-bold text-gray-800 mb-3">Categories</h2>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="#"
+                    class="px-3 py-1 bg-fruut-red text-white rounded-full hover:bg-red-700 transition">Nutrition</a>
+                <a href="#"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition">Recipes</a>
+                <a href="#"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition">Seasonal</a>
+                <a href="#"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition">Wellness</a>
+                <a href="#"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition">Subscription
+                    Tips</a>
+            </div>
+        </div>
+
+        <!-- Featured/Latest Post Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Article 1: Featured Post -->
+            <a href="#"
+                class="blog-card md:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <img src="https://placehold.co/400x300/F08080/ffffff?text=Featured+Fruit+Post"
+                    alt="A colorful bowl of exotic fruits" class="w-full md:w-1/2 h-64 md:h-auto object-cover">
+                <div class="p-6 md:p-8 flex flex-col justify-between w-full md:w-1/2">
+                    <div>
+                        <span
+                            class="text-xs font-semibold text-fruut-red uppercase tracking-wider mb-2 block">Nutrition</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            The Ultimate Guide to Seasonal Superfruits of Winter
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Discover which fruits are at their peak freshness this winter and how they can boost your
+                            immunity. We break down the vitamins, minerals, and flavor profiles of pomegranates, citrus,
+                            and more!
+                        </p>
+                    </div>
+                    <div class="text-xs text-gray-500">
+                        <span>By Jane Doe</span> | <span>November 11, 2025</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Sidebar: Newsletter Sign-up -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Stay Fresh!</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Get the latest health articles, exclusive recipes, and discount codes delivered straight to your
+                    inbox every week.
+                </p>
+                <form class="space-y-3">
+                    <input type="email" placeholder="Your Email Address"
+                        class="w-full p-3 border border-gray-300 rounded-md text-sm focus:ring-fruut-red focus:border-fruut-red">
+                    <button type="submit"
+                        class="bg-fruut-red text-white font-bold py-3 w-full rounded-md shadow-md hover:bg-red-700 transition">
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Latest Posts Grid -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 border-b-2 border-fruut-red pb-2 inline-block">
+                All Articles
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Post 2 -->
+                <a href="#" class="blog-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <img src="https://placehold.co/600x400/FFB6C1/333333?text=Quick+Recipe"
+                        alt="Fruit smoothie ingredients" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Recipes /
+                            Wellness</span>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            5 Minute Fruit Smoothies for Busy Mornings
+                        </h4>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Skip the coffee shop and blend your way to health with these five simple, fast, and
+                            nutritious smoothie recipes using common subscription fruits.
+                        </p>
+                        <span class="mt-3 inline-block text-xs font-semibold text-fruut-red">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Post 3 -->
+                <a href="#" class="blog-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <img src="https://placehold.co/600x400/98FB98/333333?text=Diet+Tips"
+                        alt="A person happily eating a salad" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span
+                            class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Nutrition</span>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            Understanding Glycemic Index in Your Favorite Fruits
+                        </h4>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Essential reading for anyone watching their sugar intake. We demystify the Glycemic Index
+                            and help you choose the best fruits for sustained energy.
+                        </p>
+                        <span class="mt-3 inline-block text-xs font-semibold text-fruut-red">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Post 4 -->
+                <a href="#" class="blog-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <img src="https://placehold.co/600x400/ADD8E6/333333?text=Corporate+Health"
+                        alt="People working in an office" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span
+                            class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Corporate</span>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            Boost Office Productivity with Fresh Fruit Deliveries
+                        </h4>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Learn how providing healthy snacks in the workplace leads to happier, more focused, and more
+                            productive employees. Case studies included.
+                        </p>
+                        <span class="mt-3 inline-block text-xs font-semibold text-fruut-red">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Post 5 -->
+                <a href="#" class="blog-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <img src="https://placehold.co/600x400/F4A460/333333?text=Skin+Care"
+                        alt="Berries and citrus fruits for skin" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Wellness /
+                            Skin Care</span>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            The Best Fruits for Glowing Skin: Antioxidant Power
+                        </h4>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Discover the essential vitamins and antioxidants found in berries and tropical fruits that
+                            fight aging and promote natural radiance.
+                        </p>
+                        <span class="mt-3 inline-block text-xs font-semibold text-fruut-red">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Post 6 -->
+                <a href="#" class="blog-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <img src="https://placehold.co/600x400/E6E6FA/333333?text=Home+Delivery"
+                        alt="Delivery man with fruit box" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span
+                            class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Subscription
+                            Tips</span>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3 hover:text-fruut-red transition">
+                            How to Customize Your Fruut Bowl Subscription
+                        </h4>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Maximize your convenience! Learn how to pause, skip deliveries, swap fruits, and change your
+                            schedule in three easy steps.
+                        </p>
+                        <span class="mt-3 inline-block text-xs font-semibold text-fruut-red">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Pagination -->
+                <div class="md:col-span-3 flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <a href="#" class="px-3 py-2 text-gray-500 hover:text-fruut-red">Previous</a>
+                        <a href="#" class="px-3 py-2 bg-fruut-red text-white font-bold rounded-md">1</a>
+                        <a href="#"
+                            class="px-3 py-2 text-gray-500 hover:text-fruut-red rounded-md hover:bg-gray-100">2</a>
+                        <a href="#"
+                            class="px-3 py-2 text-gray-500 hover:text-fruut-red rounded-md hover:bg-gray-100">3</a>
+                        <a href="#" class="px-3 py-2 text-gray-500 hover:text-fruut-red">Next</a>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Simplified for blog context, maintaining brand color) -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm border-t border-gray-700 pt-6 mt-6">
+                <p>
+                    <a href="#" class="text-red-300 hover:text-fruut-red transition">FRUUTIN</a> | Freshness Delivered
+                    Daily.
+                </p>
+                <p class="mt-1 text-gray-500">
+                    COPYRIGHT 2025 © FRUUT.IN ALL RIGHTS RESERVED
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

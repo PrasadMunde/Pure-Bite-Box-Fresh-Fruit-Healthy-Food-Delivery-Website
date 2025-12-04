@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruut Corporate Order Subscription - Clone</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font for general modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the original image's look and feel */
+        body { font-family: 'Inter', sans-serif; }
+        .bg-fruut-red { background-color: #ff0000; }
+        .text-fruut-red { color: #ff0000; }
+        .border-fruut-red { border-color: #ff0000; }
+        .logo-text { font-size: 24px; font-weight: 800; line-height: 1; }
+ .cta-red { background-color: #e53e3e; } /* A strong primary red */
+        .cta-red:hover { background-color: #c53030; }
+
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+        }
+        .icon-circle-filled {
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            color: white;
+            font-size: 20px;
+        }
+        .main-hero-text {
+            /* Simulating the left-aligned text area */
+            max-width: 500px;
+        }
+        .footer-bg { background-color: #ff0000; }
+        .footer-link { color: #fff; opacity: 0.7; transition: opacity 0.2s; }
+        .footer-link:hover { opacity: 1; }
+        .contact-top-bar { font-size: 11px; }
+        .whatsapp-button {
+            /* Simulating the floating WhatsApp button */
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar (Matching the slim red header) -->
+    <div class="bg-fruut-red text-white flex justify-between px-4 py-1 contact-top-bar">
+        <div class="flex space-x-4">
+            <span>📞 988470044</span>
+            <span>📧 fruutingmail.com</span>
+            <span>🕒 Mon - Fri 10:00 - 19:00</span>
+        </div>
+        <div class="flex space-x-2">
+            <a href="#" class="hover:opacity-80">FB</a>
+            <a href="#" class="hover:opacity-80">IG</a>
+            <a href="#" class="hover:opacity-80">LI</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+     <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-extrabold text-red-primary tracking-tight">
+                    FRESH AMRIT 🥭
+                </a>
+
+                <!-- Desktop Nav -->
+               <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+		    <a href="plans.html" class="nav-link">Fruit bowl Subscription</a>
+                    <a href="sub.html" class="nav-link">Corporate Plans</a>
+                    <a href="plans.html" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About Us</a> <!-- Updated link -->
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </nav>
+
+
+                <!-- CTA/Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:inline-block text-sm font-medium text-red-primary border-2 border-red-primary rounded-full px-4 py-1 hover:bg-red-50 transition duration-150">
+                        Login
+                    </button>
+                    <button class="cta-red text-white text-sm font-medium rounded-full px-4 py-1.5 shadow-md hover:shadow-lg transition duration-150">
+                        Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="whatsapp-button hidden md:block">
+        WhatsApp Us
+    </a>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative">
+            <div class="main-hero-text">
+                <h1 class="text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
+                    Boost productivity and Health in Your Office with Fruut!
+                </h1>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                    Ever wondered what is the first thing that employees ask for when they are stressed and unmotivated? A healthy snack! That is exactly what we are offering: fresh, Fruut Corporate Order subscription is flexible, customizable, and focused on daily deliveries of nutrient-rich fruits, and watch productivity soar.
+                </p>
+                <div class="bg-gray-100 p-4 rounded-lg inline-block">
+                    <p class="text-xs text-gray-700 font-bold mb-1">ORDER</p>
+                    <p class="text-xl font-extrabold text-fruut-red">+91 85913 58734</p>
+                </div>
+                <button class="bg-fruut-red text-white font-bold py-3 px-8 rounded-full mt-6 shadow-lg hover:shadow-xl transition duration-150">
+                    Get a Free Quote
+                </button>
+            </div>
+            <!-- The large, blurred fruit background image effect is achieved by placing the image in the background of the main content area in the original design. Since we can only use the provided image as the source, we simulate the text over an empty area and rely on the full-page structure. -->
+        </section>
+
+        <!-- Value Proposition Icons -->
+        <section class="bg-white py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-12 text-center">
+                    
+                    <!-- 1. Boost Productivity -->
+                    <div>
+                        <div class="icon-circle flex items-center justify-center rounded-full mx-auto mb-3 font-extrabold text-2xl">
+                            P
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm">Boost Productivity</h4>
+                        <p class="text-xs text-gray-500 max-w-[150px] mx-auto">Natural sugars enhance workplace productivity and focus.</p>
+                    </div>
+
+                    <!-- 2. Convenience -->
+                    <div>
+                        <div class="icon-circle flex items-center justify-center rounded-full mx-auto mb-3 font-extrabold text-2xl">
+                            C
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm">Convenience</h4>
+                        <p class="text-xs text-gray-500 max-w-[150px] mx-auto">Ready-to-eat fruit delivery, effortless, healthy, and hygienic.</p>
+                    </div>
+                    
+                    <!-- 3. Promotes Healthy Habits -->
+                    <div>
+                        <div class="icon-circle flex items-center justify-center rounded-full mx-auto mb-3 font-extrabold text-2xl">
+                            H
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm">Promotes Healthy Habits</h4>
+                        <p class="text-xs text-gray-500 max-w-[150px] mx-auto">Encourages better choices and improves workplace wellness scores.</p>
+                    </div>
+
+                    <!-- 4. Freshness -->
+                    <div>
+                        <div class="icon-circle flex items-center justify-center rounded-full mx-auto mb-3 font-extrabold text-2xl">
+                            F
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-sm">Freshness</h4>
+                        <p class="text-xs text-gray-500 max-w-[150px] mx-auto">Sourced and delivered fresh by our expert quality control team.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cut Fruit Delivery Service Section -->
+        <section class="bg-white py-16 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                        Cut Fruit Delivery As A Service.
+                    </h2>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        Fruits are handpicked, perfectly cut, and packed fresh in our facilities, following strict hygiene standards. We take pride in providing the highest quality fruit, all while making the process easy and convenient for you. Our subscription service ensures that you receive a fresh fruit bowl delivered to your office exactly when you need it.
+                    </p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Try us out today and experience the difference fresh cut fruit can make in your office!
+                    </p>
+                </div>
+                <!-- This section had a large empty block below the text, which is omitted here for better flow but was visible in the original image structure -->
+            </div>
+        </section>
+
+        <!-- Most Ordered in Corporates Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-extrabold text-center text-gray-900 mb-12 relative after:content-[''] after:block after:w-full after:h-0.5 after:bg-gray-200 after:absolute after:bottom-[-20px] after:left-0">
+                    Most ordered in Corporates
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                    
+                    <!-- Pack 1: Immunity Booster -->
+                    <div class="text-center">
+                        <!-- Placeholder image matching the color scheme of the original -->
+                        <img src="images/img1.jpg" alt="Immunity Booster Fruit Pack" class="w-full h-40 object-cover rounded-lg mb-3">
+                        <p class="font-bold text-sm text-gray-800">Immunity Booster Fruit Pack</p>
+                    </div>
+
+                    <!-- Pack 2: Diabetic Care -->
+                    <div class="text-center">
+                        <img src="images/img3.jpg" alt="Diabetic Care Fruit Pack" class="w-full h-40 object-cover rounded-lg mb-3">
+                        <p class="font-bold text-sm text-gray-800">Diabetic Care Fruit Pack</p>
+                    </div>
+
+                    <!-- Pack 3: Women Care -->
+                    <div class="text-center">
+                        <img src="images/img4.jpg" alt="Women Care Fruit Pack" class="w-full h-40 object-cover rounded-lg mb-3">
+                        <p class="font-bold text-sm text-gray-800">Women Care Fruit Pack</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Corporate Offer CTA -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-4">
+                Fruut Corporate Order Subscription
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-8">
+                Fruut manages all your daily deliveries and fruit selection to fit your office's needs and budget.
+            </p>
+            <div class="text-center">
+                <button class="bg-fruut-red text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-150">
+                    Get a Free Quote
+                </button>
+            </div>
+        </section>
+
+        <!-- Schedule Demo Meeting Section -->
+        <section class="relative py-20 overflow-hidden" style="background-image: url('images/img10.jpg'); background-size: cover; background-position: center;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <!-- Left Column: Text & List -->
+                    <div class="md:w-1/2 text-white bg-black/50 p-8 rounded-xl backdrop-blur-sm">
+                        <h2 class="text-3xl font-extrabold mb-4">
+                            Let's Schedule a demo meeting
+                        </h2>
+                        <p class="text-lg mb-6">
+                            Discuss your requirements with our taste samplers.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <span class="icon-circle-filled flex items-center justify-center rounded-full text-xs">✓</span>
+                                <span>Get fresh, tasty, and customized supplies.</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span class="icon-circle-filled flex items-center justify-center rounded-full text-xs">✓</span>
+                                <span>Get a quick demonstration of our subscription system.</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span class="icon-circle-filled flex items-center justify-center rounded-full text-xs">✓</span>
+                                <span>Learn how to effectively manage your inventory from our end.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Right Column: Form -->
+                    <div class="md:w-5/12 mt-10 md:mt-0 p-8 bg-white rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            Help us find out.
+                        </h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                            <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                            <input type="tel" placeholder="Phone" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red">
+                            <textarea placeholder="Message" rows="3" class="w-full p-3 border border-gray-300 rounded-md focus:ring-fruut-red focus:border-fruut-red"></textarea>
+                            <button type="submit" class="bg-fruut-red text-white font-bold py-3 w-full rounded-md shadow-lg hover:bg-red-700 transition duration-150">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                <!-- ABOUT US -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">ABOUT US</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Fruit Bowl Subscription</a></li>
+                        <li><a href="#" class="footer-link">Corporate Orders</a></li>
+                        <li><a href="#" class="footer-link">Franchise with us</a></li>
+                        <li><a href="#" class="footer-link">Order</a></li>
+                        <li><a href="#" class="footer-link">Refer</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- QUICK LINK -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">QUICK LINK</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="footer-link">Contact us</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Refund & Returns Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and condition</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT US -->
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">CONTACT US</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2"><span>📞</span> <span>988470044</span></li>
+                        <li class="flex items-center space-x-2"><span>📧</span> <span>fruutingmail.com</span></li>
+                        <li class="flex items-center space-x-2"><span>📍</span> <span>Bhandup West, Mumbai, Maharashtra 400078</span></li>
+                    </ul>
+                </div>
+
+                <!-- WEEKLY NEWSLETTER (Right Aligned in Original) -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">WEEKLY NEWSLETTER</h4>
+                    <form>
+                        <input type="email" placeholder="Email Address" class="w-full p-3 mb-3 rounded-md text-gray-900">
+                        <button type="submit" class="bg-gray-900 text-white font-bold py-3 w-full rounded-md hover:bg-gray-700 transition duration-150">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Bar -->
+    <div class="bg-gray-900 text-white py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between text-xs">
+            <p>COPYRIGHT 2025 © FRUUT.IN ALL RIGHTS RESERVED</p>
+            <div class="flex space-x-2">
+                <a href="#" class="hover:text-red-300">FB</a>
+                <a href="#" class="hover:text-red-300">IG</a>
+                <a href="#" class="hover:text-red-300">LI</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
